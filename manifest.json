@@ -1,0 +1,24 @@
+{
+   "background": {
+      "scripts": [ "script.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "tracking.js" ],
+      "css": [ "style.css" ],
+      "matches": [ "*://*.vk.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Хотите узнать сколько времени \"сидите\" Вконтакте?",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Мое время Вконтакте",
+   "permissions": [ "tabs", "*://*.vk.com/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.1"
+}
